@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入属性文件-->
+    <!--<properties resource="config.properties">-->
+        <!--&lt;!&ndash;开启默认值功能默认关闭&ndash;&gt;-->
+        <!--<property name="org.apache.ibatis.parsing.PropertyParser.enable-default-value" value="true"/> &lt;!&ndash; Enable this feature &ndash;&gt;-->
+        <!--&lt;!&ndash;改变默认占位符分隔符&ndash;&gt;-->
+        <!--<property name="org.apache.ibatis.parsing.PropertyParser.default-value-separator" value="?:"/>-->
+        <!--<property name="username" value="dev_user"/>-->
+        <!--<property name="password" value="F2Fa3!33TYyg"/>-->
+    <!--</properties>-->
+    <!--配置Mybatis的运行时行为-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>  <!--是否开启缓存-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+        <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="defaultFetchSize" value="100"/>
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="jdbcTypeForNull" value="OTHER"/>
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+        <setting name="logImpl" value="LOG4J"/>
+        <setting name="callSettersOnNulls" value="true"/>
+    </settings>
+    <!--<typeAliases>-->
+        <!--<typeAlias type="com.xiaowa.bioart.domain.Student" alias="s"></typeAlias>-->
+        <!--<package name="com.xiaowa.bioart.domain"></package>-->
+    <!--</typeAliases>-->
+
+    <!--<typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="java.math.RoundingMode"/>
+        <typeHandler handler="com.mybatis.common.handler.Str2TypeHandler" javaType="String"/>
+        <package name="com.mybatis.common.handler"></package>
+    </typeHandlers>-->
+
+    <!--<objectFactory type="com.mybatis.common.factory.CustomObjectFactory">
+        <property name="someProperty" value="100"/>&lt;!&ndash;该属性会通过setProperties注入&ndash;&gt;
+    </objectFactory>-->
+    <!--注册拦截器-->
+    <!--<plugins>
+        <plugin interceptor="com.mybatis.common.interceptor.PluginInterceptor">
+            <property name="someProperty" value="100"/>
+        </plugin>
+    </plugins>-->
+    <!--配置mybatis环境从MyBatis 3.4.2开始，你可以为占位符指定一个默认值-->
+    <!--<environments default="development">-->
+        <!--<environment id="development">-->
+            <!--<transactionManager type="JDBC"/>-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="${driver}"/>-->
+                <!--<property name="url" value="${url}"/>-->
+                <!--<property name="username" value="${username?:root}"/>-->
+                <!--<property name="password" value="${password:root}"/>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
+    <!--<databaseIdProvider type="DB_VENDOR">-->
+        <!--<property name="SQL Server" value="sqlserver"/>-->
+        <!--<property name="DB2" value="db2"/>-->
+        <!--<property name="Oracle" value="oracle" />-->
+        <!--<property name="mysql" value="mysql" />-->
+    <!--</databaseIdProvider>-->
+    <!--<mappers>-->
+        <!--<mapper resource="mappings/StudentMapper.xml"/>-->
+    <!--</mappers>-->
+</configuration>
